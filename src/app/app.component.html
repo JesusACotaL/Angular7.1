@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <br>
+    <h2 class="text-center">Jesus Angel Cota Lopez 220790768</h2>
+    <hr>
+    <br>
+
+    <div class="container">
+    <br><br>
+    <br>
+    
+      <div class="row">
+        <div class="col"> </div>
+        <div class="col-2">
+          <label for="cantidad1">Cantidad 1</label>
+          <input [(ngModel)]="cantidad1" type="number" class="form-control">
+        </div>
+        <div class="col-2">
+          <label for="cantidad2">Cantidad 2</label>
+          <input [(ngModel)]="cantidad2" type="number" class="form-control">
+        </div>
+        <div class="col"> </div>
+        <br><br>
+        <br><br>
+    
+        
+        <button (click)="product()" class="btn btn-primary btn-block">Multiplicar</button>
+        <button (click)="baseLog()" class="btn btn-primary btn-block">Logaritmo base n</button>
+        <button (click)="seno()" class="btn btn-primary btn-block">Seno (Cantidad 1)</button>
+        <button (click)="coseno()" class="btn btn-primary btn-block">Coseno (Cantidad 1)</button>
+        <button (click)="tangente()" class="btn btn-primary btn-block">Tangente (Cantidad 1)</button>
+
+      </div>
+    
+      <br><br>
+
+      <h5 id="operation">Suma: </h5> <p> ( {{ cantidad1 }} + {{ cantidad2 }} ) = <strong>{{cantidad1 + cantidad2}}</strong></p>
+      <h5 id="operation">Resta: </h5><p> ( {{ cantidad1 }} - {{ cantidad2 }} ) = <strong>{{cantidad1 - cantidad2}}</strong></p>
+      <h5 id="operation">Division: </h5><p> ( {{ cantidad1 }} / {{ cantidad2 }} ) = <strong>{{cantidad1 / cantidad2}}</strong></p>
+
+
+      <p style="text-align: center;" *ngIf="resultado >0">Resultado de la multiplicación: <strong>{{resultado}}</strong></p>
+      <p style="text-align: center;" *ngIf="resultado >0">Resultado del logaritmo: <strong>{{resultadoLog}}</strong></p>
+      <p style="text-align: center;" *ngIf="resultado >0">Resultado del Seno (Cantidad 1): <strong>{{resultadoSeno}}</strong></p>
+      <p style="text-align: center;" *ngIf="resultado >0">Resultado del Coseno (Cantidad 1): <strong>{{resultadoCoseno}}</strong></p>
+      <p style="text-align: center;" *ngIf="resultado >0">Resultado de Tangente (Cantidad 1): <strong>{{resultadoTan}}</strong></p>
+
+    
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+  </body>
+</html>
